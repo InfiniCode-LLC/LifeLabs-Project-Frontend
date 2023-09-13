@@ -15,16 +15,16 @@ window.addEventListener("mousemove", (e) => {
       duration: 5000,
       fill: "forwards",
     });
-    trail.style.left = e.clientX + "px";
-    trail.style.top = e.clientY + "px";
+    trail.style.left = e.clientX - 100 + "px";
+    trail.style.top = e.clientY - 100 + "px";
     firstMove = false;
     return;
   }
   trail.animate(
     [
       {
-        left: e.clientX + "px",
-        top: e.clientY + "px",
+        left: e.clientX - 100 + "px",
+        top: e.clientY - 100 + "px",
         width: "200px",
         height: "200px",
         opacity: 1,
