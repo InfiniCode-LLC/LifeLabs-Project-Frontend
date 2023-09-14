@@ -2,16 +2,19 @@
 from = "/home"
 to = "/index.html"
 status = 302
+force = true 
 
 [[redirects]]
 from = "/home/"
 to = "/index.html"
 status = 302
+force = true
 
 [[redirects]]
 from = "/home/*"
 to = "/index.html"
 status = 302
+force = true 
 
 [[redirects]]
 from = "/*"
