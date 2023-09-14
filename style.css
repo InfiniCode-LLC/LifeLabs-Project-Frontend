@@ -9,6 +9,7 @@ html,
 body {
   width: 99.6%;
   height: 98%;
+  overflow-x: hidden;
 }
 
 body {

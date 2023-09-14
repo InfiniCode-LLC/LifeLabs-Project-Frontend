@@ -43,7 +43,7 @@ window.addEventListener("mousemove", (e) => {
   }, 1000);
 });
 
-document.addEventListener("mouseleave", function (event) {
+document.addEventListener("mouseleave", (event) => {
   if (
     event.clientY <= 0 ||
     event.clientX <= 0 ||
