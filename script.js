@@ -1,10 +1,13 @@
-let scene = document.getElementById("landingParallax");
-let parallaxInstance = new Parallax(scene);
-
 let trail = document.querySelector(".trail");
 let firstMove = true;
 let timeout;
 trail.style.left;
+
+document.body.style.overflowY = "hidden";
+
+setInterval(() => {
+  document.body.style.overflowY = "hidden";
+}, 2000);
 
 window.addEventListener("mousemove", (e) => {
   if (timeout) {
@@ -56,3 +59,6 @@ document.addEventListener("mouseleave", (event) => {
     });
   }
 });
+
+let scene = document.getElementById("landingParallax");
+let parallaxInstance = new Parallax(scene);
