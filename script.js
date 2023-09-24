@@ -3,11 +3,11 @@ let firstMove = true;
 let timeout;
 trail.style.left;
 
-document.body.style.overflowY = "hidden";
+// document.body.style.overflowY = "hidden";
 
-setInterval(() => {
-  document.body.style.overflowY = "hidden";
-}, 2000);
+// setInterval(() => {
+//   document.body.style.overflowY = "hidden";
+// }, 2000);
 
 window.addEventListener("mousemove", (e) => {
   if (timeout) {
