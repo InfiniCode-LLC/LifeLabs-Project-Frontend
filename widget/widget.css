@@ -1,0 +1,77 @@
+html {
+  background-color: rgba(12, 12, 71, 0.5);
+  backdrop-filter: blur(50px);
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 10px;
+  transition: all 500ms;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(180, 180, 180);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(150, 150, 150);
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 98vh;
+  margin: 0;
+  padding: 0;
+}
+
+.statusContainer {
+  margin: 0;
+  padding-left: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 98%;
+}
+
+.chatContainer {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.chat-bubble {
+  background-color: rgba(16, 16, 95, 0.525);
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 90%;
+  word-wrap: break-word;
+}
+
+.chat-bubble.left {
+  align-self: flex-start;
+}
+
+.chat-bubble.right {
+  align-self: flex-end;
+}
+
+.chatContainer .welcomeMessage {
+  width: 90%;
+  text-align: center;
+}
+
+.chatContainer .welcomeMessage p.title {
+  font-size: 24px;
+  font-weight: 500;
+}

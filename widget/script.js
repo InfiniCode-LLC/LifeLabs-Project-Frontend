@@ -1,6 +1,8 @@
 (() => {
-  var cssId = "daisyWidget";
-  var windowOpen = false;
+  let popupWindow;
+  let isClosing = false;
+  let cssId = "daisyWidget";
+  let windowOpen = false;
   if (!document.getElementById(cssId)) {
     let head = document.getElementsByTagName("head")[0];
     let link = document.createElement("link");
@@ -31,6 +33,7 @@
       "/widget/chat.png";
     image.style.width = "100%";
     image.style.height = "100%";
+    image.draggable = false;
     image.onload = () => {
       button.appendChild(image);
       document.body.appendChild(button);
@@ -44,8 +47,19 @@
   }
 
   function DaisyChat() {
-    if (windowOpen) return;
-    var popupWindow = document.createElement("div");
+    if (windowOpen && popupWindow) {
+      if (isClosing) return;
+      isClosing = true;
+      popupWindow.classList.add("unloaded");
+      setTimeout(function () {
+        popupWindow.style.display = "none";
+        document.body.removeChild(popupWindow);
+        windowOpen = false;
+      }, 500);
+      isClosing = false;
+      return;
+    }
+    popupWindow = document.createElement("div");
     popupWindow.id = "daisy-chat";
     popupWindow.classList.add("unloaded");
 
@@ -65,7 +79,11 @@
     popupWindow.appendChild(closeButton);
 
     var chatIframe = document.createElement("iframe");
-    chatIframe.src = "https://daisy.powerui.tk/chat.html";
+    chatIframe.src =
+      window.location.protocol +
+      "//" +
+      window.location.host +
+      "/widget/index.html";
     chatIframe.style.width = "100%";
     chatIframe.style.height = "100%";
     chatIframe.style.border = "none";

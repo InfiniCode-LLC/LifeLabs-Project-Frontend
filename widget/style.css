@@ -36,7 +36,8 @@
   right: 24px;
   bottom: 24px;
   opacity: 1;
-  transition: all 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  user-select: none;
 }
 
 #daisy-btn:hover {
@@ -59,7 +60,7 @@
 
 #daisy-close {
   position: absolute;
-  top: 19px;
+  top: 17px;
   right: 18px;
   border-radius: 5px;
   border: transparent;
@@ -68,6 +69,14 @@
   align-items: center;
   height: 23px;
   width: 24px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+#daisy-close:hover {
+  cursor: pointer;
 }
 
 #daisy-chat {
@@ -80,7 +89,7 @@
   height: 80%;
   max-height: 400px;
   z-index: 1000;
-  transition: all 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 #daisy-chat iframe {

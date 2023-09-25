@@ -5,6 +5,7 @@ body,
     Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica,
     Arial, sans-serif;
 }
+
 html,
 body {
   width: 99.6%;
@@ -25,6 +26,50 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(150, 150, 150);
+}
+
+.bartender {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000000;
+}
+
+.bar {
+  width: 100%;
+  height: 20%;
+  background: #12125e;
+  animation: enter;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.bar:nth-child(2) {
+  animation-delay: 100ms;
+}
+
+.bar:nth-child(3) {
+  animation-delay: 200ms;
+}
+
+.bar:nth-child(4) {
+  animation-delay: 300ms;
+}
+
+.bar:nth-child(5) {
+  animation-delay: 400ms;
+}
+
+@keyframes enter {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 body {
@@ -139,8 +184,8 @@ body {
 }
 
 .navbar button:hover {
-  color: #ffffff;
-  background-color: #0d0d528a;
+  color: #000000;
+  background-color: #ffffff;
   transform: translateY(-5px);
   cursor: pointer;
   box-shadow: 2px 16px 63px -13px rgba(0, 0, 0, 0.56);
