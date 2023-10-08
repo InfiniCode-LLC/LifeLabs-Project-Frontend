@@ -1,3 +1,22 @@
+const scroll_anim = document.querySelectorAll(".animation");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("scroll-animation");
+      } else {
+        entry.target.classList.remove("scroll-animation");
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+for (let i = 0; i < scroll_anim.length; i++) {
+  const elements = scroll_anim[i];
+  observer.observe(elements);
+}
+
 let trail = document.querySelector(".trail");
 let firstMove = true;
 let timeout;

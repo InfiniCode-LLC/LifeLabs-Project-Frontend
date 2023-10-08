@@ -16,12 +16,6 @@ to = "/index.html"
 status = 302
 force = true 
 
-[[redirects]]
-from = "/widget/*"
-to = "/403.html"
-status = 403
-force = true 
-
 
 [[redirects]]
 from = "/*"

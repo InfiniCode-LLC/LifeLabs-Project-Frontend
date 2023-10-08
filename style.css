@@ -174,8 +174,8 @@ body {
   text-align: center;
 }
 
-.navbar button {
-  border: none;
+button {
+  border: 1px solid #3b16e2a1;
   background-color: transparent;
   color: #ffffff;
   padding: 10px;
@@ -183,7 +183,11 @@ body {
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.navbar button:hover {
+.navbar button {
+  border: none;
+}
+
+button:hover {
   color: #000000;
   background-color: #ffffff;
   transform: translateY(-5px);
@@ -191,4 +195,123 @@ body {
   box-shadow: 2px 16px 63px -13px rgba(0, 0, 0, 0.56);
   -webkit-box-shadow: 2px 16px 63px -13px rgba(0, 0, 0, 0.56);
   -moz-box-shadow: 2px 16px 63px -13px rgba(0, 0, 0, 0.56);
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+.main .landingSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 12px;
+}
+
+.main .landingSection * {
+  margin: 0;
+  text-align: center;
+}
+
+.main .content {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main .content h1.title {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.main .content p.description {
+  text-align: left;
+  margin-left: 20px;
+  width: 80%;
+}
+
+.grid {
+  width: 80%;
+  display: grid;
+  grid-column-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-self: center;
+}
+
+.grid .tier {
+  padding: 10px;
+  margin-top: 0;
+  background-color: #17179965;
+  border: 1px solid #1c1cb7e4;
+  border-radius: 10px;
+}
+
+.grid .tier h2 {
+  margin-left: 7px;
+  padding: 0;
+}
+
+.grid .tier * {
+  margin-top: 2px;
+  margin-left: 5px;
+  padding: 0;
+}
+
+.grid .tier .description {
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+.grid .tier .description .price {
+  font-weight: 500;
+}
+
+ul {
+  padding: 0;
+}
+
+ul.items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.animation {
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.scroll-animation {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-item.title {
+    text-align: left;
+    width: 200px;
+  }
+  .nav-right button {
+    font-size: 0.7rem;
+    width: 75px;
+  }
+
+  .main .content h1.title {
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .main .content p.description {
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+  }
 }
