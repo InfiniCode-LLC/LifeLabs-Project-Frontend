@@ -27,6 +27,17 @@ function addScript(src) {
   document.body.appendChild(script);
 }
 
+var header = document.querySelector(".lineup");
+var sticky = header.offsetTop;
+
+window.onscroll = () => {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+};
+
 setTimeout(() => {
   let bartender = document.querySelector(".bartender");
   if (bartender) {
